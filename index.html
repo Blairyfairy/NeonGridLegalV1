@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON GRID LEGAL | Las Vegas Tech & Gaming Law</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0b0f1a;
+  --primary: #00E5FF;
+  --secondary: #7C4DFF;
+  --accent: #00FF9F;
+  --text: #E6F1FF;
+  --muted: #8892B0;
+  --glass-bg: rgba(11,15,26,0.65);
+  --glass-blur: blur(12px);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: rgba(11,15,26,0.7);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 20px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 6% 80px;
+  background: linear-gradient(180deg, #111827 0%, #020617 100%);
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 720px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Section Headings */
+section {
+  padding: 80px 6%;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 16px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,229,255,0.25);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+ul {
+  margin-left: 18px;
+}
+
+/* Blog */
+.blog article {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--glass-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.blog article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(124,77,255,0.25);
+}
+
+/* Contact */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  background: #020617;
+  border: 1px solid #1f2937;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 600;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 60px 6%;
+  background: #020617;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive Mobile Adjustments */
+@media(max-width:768px){
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 12px;
+  }
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media(max-width:480px){
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">NEON GRID LEGAL</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#cloud">Cloud</a>
+    <a href="#gaming">Gaming</a>
+    <a href="#blog">Insights</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Las Vegas Tech, Gaming & Cyber Law Authority</h1>
+  <p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, and compliance including digital espionage law.</p>
+  <a href="#contact" class="btn">Request Consultation</a>
+</section>
+
+<section id="services">
+  <h2>Core Legal Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Cybersecurity Law</h3>
+      <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p>
+    </div>
+    <div class="card">
+      <h3>Gaming & Metagaming Law</h3>
+      <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
+    </div>
+    <div class="card">
+      <h3>E-Commerce Compliance</h3>
+      <p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p>
+    </div>
+    <div class="card">
+      <h3>Espionage & Data Sovereignty</h3>
+      <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cloud">
+  <h2>Cloud Legal Domains</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Cloud Governance</h3>
+      <ul>
+        <li>Multi-cloud compliance</li>
+        <li>Data residency & sovereignty</li>
+        <li>Zero-trust frameworks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Infrastructure Law</h3>
+      <ul>
+        <li>SaaS/IaaS contracts</li>
+        <li>Vendor risk assessment</li>
+        <li>Service-level disputes</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Security Standards</h3>
+      <ul>
+        <li>Encryption mandates</li>
+        <li>Access control liability</li>
+        <li>Cloud breach litigation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="gaming">
+  <h2>Gaming Platform Specialization</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Platform Compliance</h3>
+      <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity.</p>
+    </div>
+    <div class="card">
+      <h3>Virtual Economies</h3>
+      <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance.</p>
+    </div>
+    <div class="card">
+      <h3>Metagaming Oversight</h3>
+      <p>Fair play governance, exploit prevention, and competitive integrity management.</p>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <h2>Insights & Intelligence</h2>
+  <article>
+    <h3>The Future of Cyber Law in Gaming Ecosystems</h3>
+    <p>Exploring how competitive platforms reshape liability, jurisdiction, and compliance strategy.</p>
+  </article>
+  <article>
+    <h3>Cloud Breaches & Legal Exposure</h3>
+    <p>Understanding modern breach responsibility across distributed systems and hybrid clouds.</p>
+  </article>
+  <article>
+    <h3>Metagaming vs Compliance</h3>
+    <p>Where player strategy intersects with enforceable digital law and esports regulations.</p>
+  </article>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cloud sectors.</p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea rows="5" placeholder="Describe your case or inquiry" required></textarea>
+    <button type="submit">Submit Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law</p>
+</footer>
+
+</body>
+</html>
