@@ -112,7 +112,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 120px 6% 80px;
-  background: linear-gradient(rgba(0,0,60,0.9), rgba(0,0,80,0.9)), url('keyboardblue.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,120,0.7)), url('keyboardblue.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -285,119 +285,36 @@ footer {
 
 /* Responsive Mobile Adjustments */
 @media(max-width:768px){
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 5%;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-    margin-left: 4%;
-  }
-
-  nav {
-    margin-top: 8px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 4px 2px;
-    font-size: 0.9rem;
-  }
-
-  nav a.contact-btn {
-    display: none;
-  }
-
-  .hero {
-    padding: 100px 5% 60px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  section {
-    padding: 60px 5%;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  .blog article {
-    padding: 18px;
-  }
-
-  .contact input,
-  .contact textarea {
-    font-size: 0.95rem;
-  }
+  header { flex-direction: column; align-items: center; padding: 16px 5%; }
+  .logo { font-size: 1.4rem; margin-left: 4%; }
+  nav { margin-top: 8px; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; }
+  nav a { display: inline-block; margin: 4px 2px; font-size: 0.9rem; }
+  nav a.contact-btn { display: none; }
+  .hero { padding: 100px 5% 60px; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; padding: 0 10px; }
+  .grid { grid-template-columns: 1fr; }
+  .card { width: 100%; }
+  section { padding: 60px 5%; }
+  h2 { font-size: 1.7rem; }
+  .blog article { padding: 18px; }
+  .contact input, .contact textarea { font-size: 0.95rem; }
 }
 
 @media(max-width:480px){
-  .btn {
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  header {
-    padding: 14px 4%;
-  }
-
-  section {
-    padding: 50px 4%;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  footer {
-    padding: 40px 5%;
-    font-size: 0.8rem;
-  }
+  .btn { width: 100%; text-align: center; padding: 14px; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 0.95rem; }
+  .logo { font-size: 1.2rem; margin-left: 4%; }
+  header { padding: 14px 4%; }
+  section { padding: 50px 4%; }
+  h2 { font-size: 1.5rem; }
+  .card { padding: 22px; }
+  footer { padding: 40px 5%; font-size: 0.8rem; }
 }
 </style>
 </head>
-
 <body id="top">
-
 <header>
   <a href="#top" class="logo">
     <i class="fa-solid fa-scale-balanced"></i>
@@ -420,96 +337,205 @@ footer {
 </section>
 
 <section id="services">
-  <h2>Core Legal Services</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Cybersecurity Law <i class="fa-solid fa-shield-halved"></i></h3>
-      <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p>
-      <ul>
-        <li>ISO/IEC 27001 compliance advisory</li>
-        <li>NIST Cybersecurity Framework alignment</li>
-        <li>Incident Response Plan creation and audit</li>
-        <li>Forensic evidence handling standards (admissibility in court)</li>
-        <li>Advanced risk assessment and mitigation strategy</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Gaming & Metagaming Law <i class="fa-solid fa-gamepad"></i></h3>
-      <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
-      <ul>
-        <li>Esports compliance certifications and regulatory approvals</li>
-        <li>Digital asset governance advisory</li>
-        <li>Platform terms-of-service auditing and legal enforcement strategy</li>
-        <li>Anti-money laundering (AML) risk compliance</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>E-Commerce Compliance <i class="fa-solid fa-credit-card"></i></h3>
-      <p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p>
-      <ul>
-        <li>PCI DSS standards advisory</li>
-        <li>GDPR & CCPA compliance guidance</li>
-        <li>Cross-border transaction legal compliance</li>
-        <li>Consumer rights and digital contract enforcement</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Espionage & Data Sovereignty <i class="fa-solid fa-user-secret"></i></h3>
-      <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
-      <ul>
-        <li>FISA & Cybersecurity Law guidance</li>
-        <li>Data residency legal strategies and international law alignment</li>
-        <li>Cross-border regulatory compliance and export controls</li>
-        <li>Classified and restricted data risk mitigation</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Intellectual Property & Gaming IP <i class="fa-solid fa-copyright"></i></h3>
-      <p>Trademarks, copyrights, and patents for gaming software, virtual assets, and esports content.</p>
-      <ul>
-        <li>Trademark registration & protection for game titles</li>
-        <li>Copyrights for in-game assets and NFTs</li>
-        <li>IP enforcement for digital platforms</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Regulatory Investigations & Litigation <i class="fa-solid fa-gavel"></i></h3>
-      <p>Handling audits, investigations, and disputes for gaming and tech companies.</p>
-      <ul>
-        <li>Governmental audits & regulatory inquiries</li>
-        <li>Litigation defense for compliance disputes</li>
-        <li>Administrative hearings & settlement negotiations</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Data Privacy & Consumer Protection <i class="fa-solid fa-user-shield"></i></h3>
-      <p>Legal compliance for user data, privacy policies, and consumer rights in digital gaming platforms.</p>
-      <ul>
-        <li>GDPR, CCPA, and other regional privacy law compliance</li>
-        <li>User consent policies and tracking disclosures</li>
-        <li>Consumer protection compliance for digital products</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Slot Machines & Gaming Companies <i class="fa-solid fa-dice"></i></h3>
-      <p>Legal support for slot machine operators, repairs, and regulatory compliance for gaming companies.</p>
-      <ul>
-        <li>Licensing compliance for slot operators</li>
-        <li>Repair and service legal oversight</li>
-        <li>Player dispute resolution guidance</li>
-        <li>Regulatory reporting and audits</li>
-      </ul>
-    </div>
+<h2>Core Legal Services</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Cybersecurity Law <i class="fa-solid fa-shield-halved"></i></h3>
+    <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p>
+    <ul>
+      <li>ISO/IEC 27001 compliance advisory</li>
+      <li>NIST Cybersecurity Framework alignment</li>
+      <li>Incident Response Plan creation and audit</li>
+      <li>Forensic evidence handling standards (admissibility in court)</li>
+      <li>Advanced risk assessment and mitigation strategy</li>
+    </ul>
   </div>
+
+  <div class="card">
+    <h3>Gaming & Metagaming Law <i class="fa-solid fa-gamepad"></i></h3>
+    <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
+    <ul>
+      <li>Esports compliance certifications and regulatory approvals</li>
+      <li>Digital asset governance advisory</li>
+      <li>Platform terms-of-service auditing and legal enforcement strategy</li>
+      <li>Anti-money laundering (AML) risk compliance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>E-Commerce Compliance <i class="fa-solid fa-credit-card"></i></h3>
+    <p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p>
+    <ul>
+      <li>PCI DSS standards advisory</li>
+      <li>GDPR & CCPA compliance guidance</li>
+      <li>Cross-border transaction legal compliance</li>
+      <li>Consumer rights and digital contract enforcement</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Espionage & Data Sovereignty <i class="fa-solid fa-user-secret"></i></h3>
+    <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
+    <ul>
+      <li>FISA & Cybersecurity Law guidance</li>
+      <li>Data residency legal strategies and international law alignment</li>
+      <li>Cross-border regulatory compliance and export controls</li>
+      <li>Classified and restricted data risk mitigation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Intellectual Property & Gaming IP <i class="fa-solid fa-copyright"></i></h3>
+    <p>Trademarks, copyrights, and patents for gaming software, virtual assets, and esports content.</p>
+    <ul>
+      <li>Trademark registration & protection for game titles</li>
+      <li>Copyrights for in-game assets and NFTs</li>
+      <li>IP enforcement for digital platforms</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Regulatory Investigations & Litigation <i class="fa-solid fa-gavel"></i></h3>
+    <p>Handling audits, investigations, and disputes for gaming and tech companies.</p>
+    <ul>
+      <li>Governmental audits & regulatory inquiries</li>
+      <li>Litigation defense for compliance disputes</li>
+      <li>Administrative hearings & settlement negotiations</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Data Privacy & Consumer Protection <i class="fa-solid fa-user-shield"></i></h3>
+    <p>Legal compliance for user data, privacy policies, and consumer rights in digital gaming platforms.</p>
+    <ul>
+      <li>GDPR, CCPA, and other regional privacy law compliance</li>
+      <li>User consent policies and tracking disclosures</li>
+      <li>Consumer protection compliance for digital products</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Slot Machines & Gaming Companies <i class="fa-solid fa-dice"></i></h3>
+    <p>Legal support for slot machine operators, repairs, and regulatory compliance for gaming companies.</p>
+    <ul>
+      <li>Licensing compliance for slot operators</li>
+      <li>Repair and service legal oversight</li>
+      <li>Player dispute resolution guidance</li>
+      <li>Regulatory reporting and audits</li>
+    </ul>
+  </div>
+</div>
 </section>
 
-<!-- Cloud, Gaming, Slots, Blog, Contact sections continue exactly as before -->
+<section id="cloud">
+<h2>Cloud Legal Domains</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Cloud Governance</h3>
+    <ul>
+      <li>Multi-cloud compliance and SLA enforcement</li>
+      <li>Data residency & sovereignty regulations</li>
+      <li>Zero-trust frameworks advisory</li>
+      <li>Cloud audit readiness and reporting</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Infrastructure Law</h3>
+    <ul>
+      <li>SaaS/IaaS vendor contracts review</li>
+      <li>Vendor risk assessment & liability allocation</li>
+      <li>Service-level disputes and litigation support</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Security Standards</h3>
+    <ul>
+      <li>Encryption and key management legal compliance</li>
+      <li>Access control liability and breach reporting standards</li>
+      <li>Cloud breach litigation and regulatory interface</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="gaming">
+<h2>Gaming Platform Specialization</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Platform Compliance</h3>
+    <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity, legal enforceability, and player protection.</p>
+  </div>
+  <div class="card">
+    <h3>Virtual Economies</h3>
+    <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance with taxation and reporting guidance.</p>
+  </div>
+  <div class="card">
+    <h3>Metagaming Oversight</h3>
+    <p>Fair play governance, exploit prevention, competitive integrity management, and dispute resolution protocols.</p>
+  </div>
+</div>
+</section>
+
+<section id="slots">
+<h2>Slot Machines & Gaming Company Legal Advisory</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Slot Compliance</h3>
+    <p>Regulatory compliance for slot machines and casino operators ensuring adherence to local gaming laws.</p>
+  </div>
+  <div class="card">
+    <h3>Repairs & Services</h3>
+    <p>Legal considerations for slot machine repairs, maintenance contracts, and liability management.</p>
+  </div>
+  <div class="card">
+    <h3>Player Disputes</h3>
+    <p>Dispute resolution framework and legal counsel for casino operators to manage player complaints.</p>
+  </div>
+</div>
+</section>
+
+<section id="blog" class="blog">
+<h2>Insights</h2>
+<article>
+  <h3>Emerging Trends in Cybersecurity Compliance for Gaming Platforms</h3>
+  <p>Explore regulatory evolutions, threat mitigation, and strategic guidance for gaming companies navigating complex cybersecurity laws.</p>
+</article>
+<article>
+  <h3>Cloud Infrastructure Legal Considerations for SaaS Providers</h3>
+  <p>Review contract obligations, SLA enforcement, and regulatory compliance for multi-region SaaS operations.</p>
+</article>
+<article>
+  <h3>Digital Asset Governance and NFT IP Law</h3>
+  <p>Understanding intellectual property rights, licensing, and dispute resolution for NFTs and digital in-game assets.</p>
+</article>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<form>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Message" rows="6" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+  <p>&copy; 2026 NEON GRID LEGAL. All Rights Reserved.</p>
+  <p>Designed for tech, gaming, and cybersecurity legal advisory in Las Vegas.</p>
+</footer>
+
+<div id="backToTop"></div>
 
 <script>
-// Back to top
+// Back to Top
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  if(window.scrollY > 300){
+    backToTop.style.display = 'flex';
+  } else {
+    backToTop.style.display = 'none';
+  }
 });
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
