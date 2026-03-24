@@ -8,6 +8,9 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome for Legal Scale -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
 :root {
   --bg: #0a0e1b;
@@ -18,6 +21,7 @@
   --muted: #7a8699;
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
+  --logo-star: #FFD700; /* yellow star */
   --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988);
 }
 
@@ -45,7 +49,7 @@ a {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between; /* desktop layout */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 6%;
   background: rgba(10,14,27,0.7);
@@ -65,8 +69,11 @@ header {
   gap: 10px;
 }
 
-.logo svg {
-  fill: var(--primary);
+.logo i {
+  color: #FFD700;
+  font-size: 1.6rem;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .logo span {
@@ -106,15 +113,14 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 120px 6% 80px;
+  background: linear-gradient(rgba(0,0,50,0.65), rgba(0,0,50,0.65)), url('keyboardblue.png') center/cover no-repeat;
   position: relative;
-  background: linear-gradient(rgba(0,0,50,0.95), rgba(0,0,50,0.95)), url('keyboardblue.png') center/cover no-repeat;
 }
 
 .hero h1 {
   font-size: 2.8rem;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: #ffffff;
 }
 
 .hero p {
@@ -263,8 +269,8 @@ footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 48px;
-  height: 48px;
+  width: 48px; /* original size restored */
+  height: 48px; /* original size restored */
   z-index: 1000;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   border-radius: 50%;
@@ -295,25 +301,21 @@ footer {
 
   .logo {
     font-size: 1.4rem;
-    margin-left: 5%; /* moved 5% left */
+    margin-left: 5%;
   }
 
   nav {
     margin-top: 8px;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap; /* all on one line */
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   nav a {
     display: inline-block;
-    margin: 4px 6px; /* closer together */
-    font-size: 0.85rem; /* slightly smaller text */
-  }
-
-  nav a.contact-btn {
-    transform: scale(0.75); /* 25% smaller */
+    margin: 4px 2px;
+    font-size: 0.9rem;
   }
 
   .hero {
@@ -352,6 +354,10 @@ footer {
   .contact input,
   .contact textarea {
     font-size: 0.95rem;
+  }
+
+  nav a.contact-btn {
+    transform: scale(0.75);
   }
 }
 
@@ -401,9 +407,7 @@ footer {
 
 <header>
   <a href="#top" class="logo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-      <path d="M12 2C11.45 2 11 2.45 11 3V13H8L12 20L16 13H13V3C13 2.45 12.55 2 12 2Z"/>
-    </svg>
+    <i class="fa-solid fa-scale-balanced"></i>
     <span>NEON GRID LEGAL</span>
   </a>
   <nav>
