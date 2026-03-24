@@ -109,29 +109,40 @@ nav a:hover {
 }
 
 /* Hero Section */
+
 .hero {
   text-align: center;
   padding: 120px 6% 80px;
-  background: linear-gradient(rgba(0,3,10,0.75), rgba(0,5,15,0.75)), url('keyboardblue.png') center/cover no-repeat;
+  /* Darker see-through overlay with tealish-blue tint */
+  background: linear-gradient(rgba(0,6,15,0.85), rgba(0,10,25,0.85)), url('keyboardblue.png') center/cover no-repeat;
   position: relative;
 }
 
+.hero h1,
+.hero p {
+  /* Gradient text: left = teal, right = logo blue */
+  background: linear-gradient(90deg, #00b38a, #00b5d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Keep subtle shadow for readability */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+
+/* Keep font sizes and spacing as before */
 .hero h1 {
-  color: #05C28F;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
   font-size: 2.8rem;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .hero p {
-  color: #05C28F;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
   max-width: 720px;
   margin: auto;
   font-size: 1.1rem;
 }
 
+  
 .btn {
   display: inline-block;
   margin-top: 30px;
