@@ -18,7 +18,7 @@
   --muted: #7a8699;
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
-  --logo-star: #FFD700; /* yellow star */
+  --logo-star: #FFD700; /* used in gradient fallback for logo */
   --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988);
 }
 
@@ -108,7 +108,7 @@ nav a:hover {
   text-align: center;
   padding: 120px 6% 80px;
   position: relative;
-  background: linear-gradient(rgba(0,0,50,0.85), rgba(0,0,50,0.85)), url('keyboardblue.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,50,0.9), rgba(0,0,50,0.9)), url('keyboardblue.png') center/cover no-repeat;
 }
 
 .hero h1 {
@@ -398,7 +398,7 @@ footer {
 <header>
   <a href="#top" class="logo">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-      <path d="M12 0L15.09 7.36L23.64 8.64L17 14.14L18.18 22.64L12 18.77L5.82 22.64L7 14.14L0.36 8.64L8.91 7.36L12 0Z"/>
+      <path d="M12 2C11.45 2 11 2.45 11 3V9.28L6.16 11.57C5.6 11.84 5.48 12.56 5.94 12.94L11 17V21H13V17L18.06 12.94C18.52 12.56 18.4 11.84 17.84 11.57L13 9.28V3C13 2.45 12.55 2 12 2ZM12 4V8.5L14.76 9.86L12 11.72V4Z"/>
     </svg>
     <span>NEON GRID LEGAL</span>
   </a>
