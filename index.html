@@ -8,9 +8,6 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Font Awesome for Legal Scale and Gaming Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
 <style>
 :root {
   --bg: #0a0e1b;
@@ -21,6 +18,7 @@
   --muted: #7a8699;
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
+  --logo-star: #FFD700; /* yellow star */
   --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988);
 }
 
@@ -68,11 +66,8 @@ header {
   gap: 10px;
 }
 
-.logo i {
-  color: #00a3c2;
-  font-size: 1.6rem;
-  margin-right: 8px;
-  vertical-align: middle;
+.logo svg {
+  fill: var(--logo-star);
 }
 
 .logo span {
@@ -112,7 +107,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 120px 6% 80px;
-  background: linear-gradient(rgba(0,80,80,0.7), rgba(0,80,80,0.7)), url('keyboardblue.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,64,64,0.45), rgba(0,64,64,0.45)), url('keyboardblue.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -123,7 +118,7 @@ nav a:hover {
 }
 
 .hero p {
-  color: #ffffff;
+  color: #ffffff; /* changed to white for contrast */
   max-width: 720px;
   margin: auto;
   font-size: 1.1rem;
@@ -199,6 +194,13 @@ h2::after {
   font-size: 1.25rem;
   display: flex;
   align-items: center;
+}
+
+.card h3 svg {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  fill: var(--accent);
 }
 
 /* Blog */
@@ -287,13 +289,15 @@ footer {
 @media(max-width:768px){
   header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 16px 5%;
   }
 
   .logo {
     font-size: 1.4rem;
     margin-left: 4%;
+    position: relative;
+    left: 3%;
   }
 
   nav {
@@ -306,7 +310,7 @@ footer {
 
   nav a {
     display: inline-block;
-    margin: 4px 2px;
+    margin: 4px 0;
     font-size: 0.9rem;
   }
 
@@ -399,14 +403,15 @@ footer {
 
 <header>
   <a href="#top" class="logo">
-    <i class="fa-solid fa-scale-balanced"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+      <path d="M12 2C8 2 5 5 5 9c0 4 7 13 7 13s7-9 7-13c0-4-3-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+    </svg>
     <span>NEON GRID LEGAL</span>
   </a>
   <nav>
     <a href="#services">Services</a>
     <a href="#cloud">Cloud</a>
     <a href="#gaming">Gaming</a>
-    <a href="#slots">Slots</a>
     <a href="#blog">Insights</a>
     <a href="#contact" class="contact-btn">Contact</a>
   </nav>
@@ -414,7 +419,7 @@ footer {
 
 <section class="hero">
   <h1>Las Vegas Tech, Gaming & Cyber Law Authority</h1>
-  <p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, slot machines, and compliance including digital espionage law, international licensing, and regulatory alignment for technology enterprises.</p>
+  <p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, and compliance including digital espionage law, international licensing, and regulatory alignment for technology enterprises.</p>
   <a href="#contact" class="btn">Request Consultation</a>
 </section>
 
@@ -422,7 +427,7 @@ footer {
   <h2>Core Legal Services</h2>
   <div class="grid">
     <div class="card">
-      <h3>Cybersecurity Law <i class="fa-solid fa-shield-halved"></i></h3>
+      <h3>Cybersecurity Law</h3>
       <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p>
       <ul>
         <li>ISO/IEC 27001 compliance advisory</li>
@@ -433,7 +438,7 @@ footer {
       </ul>
     </div>
     <div class="card">
-      <h3>Gaming & Metagaming Law <i class="fa-solid fa-gamepad"></i></h3>
+      <h3>Gaming & Metagaming Law</h3>
       <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
       <ul>
         <li>Esports compliance certifications and regulatory approvals</li>
@@ -443,7 +448,7 @@ footer {
       </ul>
     </div>
     <div class="card">
-      <h3>E-Commerce Compliance <i class="fa-solid fa-credit-card"></i></h3>
+      <h3>E-Commerce Compliance</h3>
       <p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p>
       <ul>
         <li>PCI DSS standards advisory</li>
@@ -453,7 +458,7 @@ footer {
       </ul>
     </div>
     <div class="card">
-      <h3>Espionage & Data Sovereignty <i class="fa-solid fa-user-secret"></i></h3>
+      <h3>Espionage & Data Sovereignty</h3>
       <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
       <ul>
         <li>FISA & Cybersecurity Law guidance</li>
@@ -463,40 +468,28 @@ footer {
       </ul>
     </div>
     <div class="card">
-      <h3>Intellectual Property & Gaming IP <i class="fa-solid fa-copyright"></i></h3>
-      <p>Trademarks, copyrights, and patents for gaming software, virtual assets, and esports content.</p>
+      <h3>Repairs & Services</h3>
+      <p>Legal considerations for slot machine repairs, maintenance contracts, and liability management.</p>
+    </div>
+    <div class="card">
+      <h3>Slot Gaming Disputes</h3>
+      <p>Handling disputes, player claims, and enforcement actions related to slot machine operations.</p>
+    </div>
+    <div class="card">
+      <h3>Cloud Governance</h3>
       <ul>
-        <li>Trademark registration & protection for game titles</li>
-        <li>Copyrights for in-game assets and NFTs</li>
-        <li>IP enforcement for digital platforms</li>
+        <li>Multi-cloud compliance and SLA enforcement</li>
+        <li>Data residency & sovereignty regulations</li>
+        <li>Zero-trust frameworks advisory</li>
+        <li>Cloud audit readiness and reporting</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Regulatory Investigations & Litigation <i class="fa-solid fa-gavel"></i></h3>
-      <p>Handling audits, investigations, and disputes for gaming and tech companies.</p>
+      <h3>Infrastructure Law</h3>
       <ul>
-        <li>Governmental audits & regulatory inquiries</li>
-        <li>Litigation defense for compliance disputes</li>
-        <li>Administrative hearings & settlement negotiations</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Data Privacy & Consumer Protection <i class="fa-solid fa-user-shield"></i></h3>
-      <p>Legal compliance for user data, privacy policies, and consumer rights in digital gaming platforms.</p>
-      <ul>
-        <li>GDPR, CCPA, and other regional privacy law compliance</li>
-        <li>User consent policies and tracking disclosures</li>
-        <li>Consumer protection compliance for digital products</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Slot Machines & Gaming Companies <i class="fa-solid fa-dice"></i></h3>
-      <p>Legal support for slot machine operators, repairs, and regulatory compliance for gaming companies.</p>
-      <ul>
-        <li>Licensing compliance for slot operators</li>
-        <li>Repair and service legal oversight</li>
-        <li>Player dispute resolution guidance</li>
-        <li>Regulatory reporting and audits</li>
+        <li>SaaS/IaaS vendor contracts review</li>
+        <li>Vendor risk assessment & liability allocation</li>
+        <li>Service-level disputes and litigation support</li>
       </ul>
     </div>
   </div>
@@ -548,23 +541,9 @@ footer {
       <h3>Metagaming Oversight</h3>
       <p>Fair play governance, exploit prevention, competitive integrity management, and dispute resolution protocols.</p>
     </div>
-  </div>
-</section>
-
-<section id="slots">
-  <h2>Slot Machines & Gaming Company Legal Advisory</h2>
-  <div class="grid">
     <div class="card">
-      <h3>Slot Compliance</h3>
-      <p>Regulatory compliance for slot machines and casino operators ensuring adherence to local gaming laws.</p>
-    </div>
-    <div class="card">
-      <h3>Repairs & Services</h3>
-      <p>Legal considerations for slot machine repairs, maintenance contracts, and liability management.</p>
-    </div>
-    <div class="card">
-      <h3>Slot Gaming Disputes</h3>
-      <p>Handling disputes, player claims, and enforcement actions related to slot machine operations.</p>
+      <h3>Slot Machines & Casinos</h3>
+      <p>Legal oversight for slot machines, casino compliance, licensing, and repair services.</p>
     </div>
   </div>
 </section>
@@ -587,38 +566,21 @@ footer {
 
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>Las Vegas HQ — Serving global clients in tech, gaming, cloud sectors, and slot machine operators. Offering advisory on cybersecurity, digital asset governance, regulatory alignment, and gaming compliance worldwide.</p>
+  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cybersecurity law.</p>
   <form>
-    <input type="text" placeholder="Your Name" required>
+    <input type="text" placeholder="Full Name" required>
     <input type="email" placeholder="Email Address" required>
-    <textarea rows="5" placeholder="Describe your case or inquiry" required></textarea>
-    <button type="submit">Submit Inquiry</button>
+    <input type="text" placeholder="Company / Organization">
+    <textarea placeholder="Your message here..." required></textarea>
+    <button type="submit">Submit</button>
   </form>
 </section>
 
 <footer>
-  <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law | ISO 27001 | NIST CSF | PCI DSS Compliance</p>
+  <p>&copy; 2026 NEON GRID LEGAL. All rights reserved. | Designed for tech, gaming, and cybersecurity enterprises.</p>
 </footer>
 
-<!-- Back to Top Button -->
 <div id="backToTop"></div>
-
-<script>
-// Back to top functionality
-const backToTopBtn = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    backToTopBtn.style.display = 'flex';
-  } else {
-    backToTopBtn.style.display = 'none';
-  }
-});
-
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
 
 </body>
 </html>
