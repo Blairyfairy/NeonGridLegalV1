@@ -18,6 +18,8 @@
   --muted: #7a8699;
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
+  --logo-star: #FFD700; /* modern yellow for star */
+  --logo-alt: #00c988;  /* 3rd color for alternating text */
 }
 
 /* Reset */
@@ -58,11 +60,22 @@ header {
 .logo {
   font-weight: 700;
   font-size: 1.6rem;
-  color: var(--primary);
   letter-spacing: 1px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.logo svg {
+  fill: var(--logo-star);
+}
+
+.logo span.primary {
+  color: var(--primary);
+}
+
+.logo span.alt {
+  color: var(--logo-alt);
 }
 
 nav a {
@@ -243,16 +256,16 @@ footer {
   }
 
   nav {
-    margin-top: 8px; /* reduced spacing so menu is not far down */
+    margin-top: 8px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* spread links horizontally */
+    justify-content: space-between;
   }
 
   nav a {
-    display: inline-block; /* horizontal layout */
-    margin: 4px 0; /* small vertical margin */
+    display: inline-block;
+    margin: 4px 0;
   }
 
   .hero {
@@ -340,10 +353,10 @@ footer {
 
 <header>
   <div class="logo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--primary)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
       <path d="M12 0L15.09 7.36L23.64 8.64L17 14.14L18.18 22.64L12 18.77L5.82 22.64L7 14.14L0.36 8.64L8.91 7.36L12 0Z"/>
     </svg>
-    NEON GRID LEGAL
+    <span class="primary">NEON</span> <span class="alt">GRID</span> <span class="primary">LEGAL</span>
   </div>
   <nav>
     <a href="#services">Services</a>
