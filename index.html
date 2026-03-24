@@ -243,13 +243,16 @@ footer {
   }
 
   nav {
-    margin-top: 12px;
+    margin-top: 8px; /* reduced spacing so menu is not far down */
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* spread links horizontally */
   }
 
   nav a {
-    display: block;
-    margin: 8px 0;
+    display: inline-block; /* horizontal layout */
+    margin: 4px 0; /* small vertical margin */
   }
 
   .hero {
