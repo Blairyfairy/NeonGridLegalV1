@@ -9,17 +9,17 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#0a0e1b;
-  --primary:#00b5d9;
-  --secondary:#5e3eff;
-  --accent:#00c988;
-  --text:#dce6f2;
-  --muted:#7a8699;
+:root{
+--bg:#0a0e1b;
+--primary:#00b5d9;
+--secondary:#5e3eff;
+--accent:#00c988;
+--text:#dce6f2;
+--muted:#7a8699;
+--glass:rgba(10,14,27,0.55);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-
 body{background:var(--bg);color:var(--text);line-height:1.6;}
 
 header{
@@ -28,20 +28,17 @@ padding:20px 6%;
 background:rgba(10,14,27,0.7);
 backdrop-filter:blur(12px);
 position:sticky;top:0;z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.logo{
-font-weight:700;font-size:1.6rem;
-display:flex;align-items:center;gap:10px;
-}
-.logo i{color:#00a3c2;}
+.logo{display:flex;align-items:center;font-weight:700;font-size:1.6rem;}
+.logo i{margin-right:8px;color:#00a3c2;}
 .logo span{
 background:linear-gradient(90deg,#00b5d9,#00c988);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 
-nav a{margin-left:20px;color:var(--text);}
+nav a{margin-left:18px;color:var(--text);font-weight:500;}
 .contact-btn{
 padding:6px 14px;border-radius:30px;
 background:linear-gradient(135deg,var(--primary),var(--secondary));
@@ -50,14 +47,15 @@ background:linear-gradient(135deg,var(--primary),var(--secondary));
 .hero{
 text-align:center;
 padding:120px 6% 80px;
-/* DARK FOREST TEAL FIX */
+
+/* 🔥 FIXED HERO (DARK + CLEAR IMAGE) */
 background:
-linear-gradient(rgba(0,60,55,0.82),rgba(0,60,55,0.82)),
+linear-gradient(rgba(0,40,38,0.55),rgba(0,40,38,0.55)),
 url('keyboardblue.png') center/cover no-repeat;
 }
 
 .hero h1{font-size:2.8rem;margin-bottom:20px;}
-.hero p{max-width:700px;margin:auto;color:#fff;}
+.hero p{max-width:700px;margin:auto;color:#ffffff;font-size:1.1rem;}
 
 .btn{
 display:inline-block;margin-top:30px;
@@ -70,42 +68,50 @@ h2{text-align:center;margin-bottom:40px;color:var(--primary);}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:24px;
 }
 
 .card{
-background:rgba(10,14,27,0.6);
-padding:24px;border-radius:14px;
+background:var(--glass);
+backdrop-filter:blur(12px);
+padding:26px;border-radius:14px;
 border:1px solid rgba(255,255,255,0.05);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,181,217,0.2);
 }
 
 .blog article{
 margin-bottom:20px;
 padding:20px;
-background:rgba(10,14,27,0.6);
+background:var(--glass);
 border-radius:10px;
 }
 
 .contact input,.contact textarea{
 width:100%;padding:12px;margin:10px 0;
 background:#05070f;border:1px solid #1f2937;color:#fff;
+border-radius:6px;
 }
 
 .contact button{
 width:100%;padding:12px;
 background:linear-gradient(135deg,var(--primary),var(--secondary));
-border:none;
+border:none;border-radius:30px;
 }
 
 footer{
-text-align:center;padding:40px;
+text-align:center;padding:50px;
 background:#05070f;color:var(--muted);
 }
 
+/* Back to top */
 #backToTop{
 position:fixed;bottom:20px;right:20px;
-width:45px;height:45px;border-radius:50%;
+width:48px;height:48px;border-radius:50%;
 background:linear-gradient(135deg,var(--primary),var(--secondary));
 display:flex;align-items:center;justify-content:center;
 cursor:pointer;
@@ -114,8 +120,10 @@ cursor:pointer;
 /* MOBILE */
 @media(max-width:768px){
 .logo{margin-left:4%;}
-nav{display:flex;flex-wrap:wrap;}
+nav{display:flex;flex-wrap:wrap;justify-content:center;}
+nav a{margin:4px;font-size:0.9rem;}
 .contact-btn{display:none;}
+.hero h1{font-size:2rem;}
 }
 </style>
 </head>
@@ -140,7 +148,7 @@ nav{display:flex;flex-wrap:wrap;}
 
 <section class="hero">
 <h1>Las Vegas Tech, Gaming & Cyber Law Authority</h1>
-<p>Elite legal strategy for cybersecurity, cloud, e-commerce, gaming, and slot machine regulation.</p>
+<p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, and slot machine compliance.</p>
 <a href="#contact" class="btn">Request Consultation</a>
 </section>
 
@@ -148,14 +156,14 @@ nav{display:flex;flex-wrap:wrap;}
 <h2>Core Legal Services</h2>
 <div class="grid">
 
-<div class="card"><h3>Cybersecurity Law</h3><p>Incident response & compliance.</p></div>
-<div class="card"><h3>Cloud Law</h3><p>AWS, Azure contracts & risk.</p></div>
-<div class="card"><h3>E-Commerce</h3><p>Platform liability & disputes.</p></div>
-<div class="card"><h3>Data Privacy</h3><p>GDPR, CCPA compliance.</p></div>
-<div class="card"><h3>IP Protection</h3><p>Trademarks & digital assets.</p></div>
-<div class="card"><h3>AI Law</h3><p>Emerging AI regulation.</p></div>
-<div class="card"><h3>Digital Fraud</h3><p>Online fraud defense.</p></div>
-<div class="card"><h3>Regulatory Strategy</h3><p>Multi-state compliance.</p></div>
+<div class="card"><h3>Cybersecurity Law</h3><p>Incident response, breach liability, and regulatory compliance.</p></div>
+<div class="card"><h3>Cloud Infrastructure Law</h3><p>AWS, Azure legal architecture and multi-region compliance.</p></div>
+<div class="card"><h3>E-Commerce Law</h3><p>Platform disputes, chargebacks, and consumer protection.</p></div>
+<div class="card"><h3>Data Privacy</h3><p>GDPR, CCPA, and international data governance.</p></div>
+<div class="card"><h3>Intellectual Property</h3><p>Digital asset protection and licensing frameworks.</p></div>
+<div class="card"><h3>AI & Automation Law</h3><p>Regulatory strategy for emerging AI systems.</p></div>
+<div class="card"><h3>Digital Fraud & Abuse</h3><p>Online fraud defense and mitigation strategies.</p></div>
+<div class="card"><h3>Regulatory Strategy</h3><p>Multi-state and international compliance planning.</p></div>
 
 </div>
 </section>
@@ -164,7 +172,7 @@ nav{display:flex;flex-wrap:wrap;}
 <h2>Cloud & Infrastructure</h2>
 <div class="grid">
 <div class="card"><h3>AWS Compliance</h3></div>
-<div class="card"><h3>Multi-AZ Law</h3></div>
+<div class="card"><h3>Multi-AZ Legal Design</h3></div>
 <div class="card"><h3>DevOps Risk</h3></div>
 </div>
 </section>
@@ -213,7 +221,7 @@ nav{display:flex;flex-wrap:wrap;}
 </section>
 
 <footer>
-<p>© 2026 NEON GRID LEGAL</p>
+<p>© 2026 NEON GRID LEGAL. All rights reserved.</p>
 </footer>
 
 <div id="backToTop">▲</div>
