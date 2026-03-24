@@ -18,8 +18,8 @@
   --muted: #7a8699;
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
-  --logo-star: #FFD700; /* modern yellow for star */
-  --logo-alt: #00c988;  /* 3rd color for alternating text */
+  --logo-star: #FFD700; /* yellow star */
+  --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988); /* blue → green gradient */
 }
 
 /* Reset */
@@ -66,22 +66,39 @@ header {
   gap: 10px;
 }
 
+/* Star color */
 .logo svg {
   fill: var(--logo-star);
 }
 
-.logo span.primary {
-  color: var(--primary);
-}
-
-.logo span.alt {
-  color: var(--logo-alt);
+/* Gradient logo text */
+.logo span {
+  background: var(--logo-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav a {
   margin-left: 20px;
   color: var(--text);
   font-weight: 500;
+}
+
+/* Contact button in nav */
+nav a.contact-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+nav a.contact-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
 
 nav a:hover {
@@ -356,14 +373,14 @@ footer {
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
       <path d="M12 0L15.09 7.36L23.64 8.64L17 14.14L18.18 22.64L12 18.77L5.82 22.64L7 14.14L0.36 8.64L8.91 7.36L12 0Z"/>
     </svg>
-    <span class="primary">NEON</span> <span class="alt">GRID</span> <span class="primary">LEGAL</span>
+    <span>NEON GRID LEGAL</span>
   </div>
   <nav>
     <a href="#services">Services</a>
     <a href="#cloud">Cloud</a>
     <a href="#gaming">Gaming</a>
     <a href="#blog">Insights</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact" class="contact-btn">Contact</a>
   </nav>
 </header>
 
@@ -376,36 +393,87 @@ footer {
 <section id="services">
   <h2>Core Legal Services</h2>
   <div class="grid">
-    <div class="card"><h3>Cybersecurity Law</h3><p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p></div>
-    <div class="card"><h3>Gaming & Metagaming Law</h3><p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p></div>
-    <div class="card"><h3>E-Commerce Compliance</h3><p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p></div>
-    <div class="card"><h3>Espionage & Data Sovereignty</h3><p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p></div>
+    <div class="card">
+      <h3>Cybersecurity Law</h3>
+      <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients.</p>
+    </div>
+    <div class="card">
+      <h3>Gaming & Metagaming Law</h3>
+      <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
+    </div>
+    <div class="card">
+      <h3>E-Commerce Compliance</h3>
+      <p>Payment systems, fraud prevention, platform liability, and global trade regulations.</p>
+    </div>
+    <div class="card">
+      <h3>Espionage & Data Sovereignty</h3>
+      <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
+    </div>
   </div>
 </section>
 
 <section id="cloud">
   <h2>Cloud Legal Domains</h2>
   <div class="grid">
-    <div class="card"><h3>Cloud Governance</h3></div>
-    <div class="card"><h3>Infrastructure Law</h3></div>
-    <div class="card"><h3>Security Standards</h3></div>
+    <div class="card">
+      <h3>Cloud Governance</h3>
+      <ul>
+        <li>Multi-cloud compliance</li>
+        <li>Data residency & sovereignty</li>
+        <li>Zero-trust frameworks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Infrastructure Law</h3>
+      <ul>
+        <li>SaaS/IaaS contracts</li>
+        <li>Vendor risk assessment</li>
+        <li>Service-level disputes</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Security Standards</h3>
+      <ul>
+        <li>Encryption mandates</li>
+        <li>Access control liability</li>
+        <li>Cloud breach litigation</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section id="gaming">
   <h2>Gaming Platform Specialization</h2>
   <div class="grid">
-    <div class="card"><h3>Platform Compliance</h3></div>
-    <div class="card"><h3>Virtual Economies</h3></div>
-    <div class="card"><h3>Metagaming Oversight</h3></div>
+    <div class="card">
+      <h3>Platform Compliance</h3>
+      <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity.</p>
+    </div>
+    <div class="card">
+      <h3>Virtual Economies</h3>
+      <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance.</p>
+    </div>
+    <div class="card">
+      <h3>Metagaming Oversight</h3>
+      <p>Fair play governance, exploit prevention, and competitive integrity management.</p>
+    </div>
   </div>
 </section>
 
 <section id="blog" class="blog">
   <h2>Insights & Intelligence</h2>
-  <article><h3>The Future of Cyber Law in Gaming Ecosystems</h3></article>
-  <article><h3>Cloud Breaches & Legal Exposure</h3></article>
-  <article><h3>Metagaming vs Compliance</h3></article>
+  <article>
+    <h3>The Future of Cyber Law in Gaming Ecosystems</h3>
+    <p>Exploring how competitive platforms reshape liability, jurisdiction, and compliance strategy.</p>
+  </article>
+  <article>
+    <h3>Cloud Breaches & Legal Exposure</h3>
+    <p>Understanding modern breach responsibility across distributed systems and hybrid clouds.</p>
+  </article>
+  <article>
+    <h3>Metagaming vs Compliance</h3>
+    <p>Where player strategy intersects with enforceable digital law and esports regulations.</p>
+  </article>
 </section>
 
 <section id="contact" class="contact">
