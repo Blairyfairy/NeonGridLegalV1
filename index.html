@@ -107,7 +107,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 120px 6% 80px;
-  background: linear-gradient(rgba(0,64,64,0.45), rgba(0,64,64,0.45)), url('keyboardblue.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,64,64,0.6), rgba(0,64,64,0.6)), url('keyboardblue.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -297,7 +297,7 @@ footer {
     font-size: 1.4rem;
     margin-left: 4%;
     position: relative;
-    left: 3%;
+    left: 4%;
   }
 
   nav {
@@ -566,21 +566,38 @@ footer {
 
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cybersecurity law.</p>
+  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cloud sectors. Offering advisory on cybersecurity, digital asset governance, and regulatory alignment worldwide.</p>
   <form>
-    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Company / Organization">
-    <textarea placeholder="Your message here..." required></textarea>
-    <button type="submit">Submit</button>
+    <textarea rows="5" placeholder="Describe your case or inquiry" required></textarea>
+    <button type="submit">Submit Inquiry</button>
   </form>
 </section>
 
 <footer>
-  <p>&copy; 2026 NEON GRID LEGAL. All rights reserved. | Designed for tech, gaming, and cybersecurity enterprises.</p>
+  <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law | ISO 27001 | NIST CSF | PCI DSS Compliance</p>
 </footer>
 
+<!-- Back to Top Button -->
 <div id="backToTop"></div>
+
+<script>
+// Back to top functionality
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.style.display = 'flex';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
 </body>
 </html>
