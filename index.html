@@ -263,29 +263,26 @@ footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 24px;  /* 50% smaller */
-  height: 24px; /* 50% smaller */
+  width: 48px; /* original size restored */
+  height: 48px; /* original size restored */
   z-index: 1000;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
-  display: none;
-  opacity: 0.7;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 }
 
 #backToTop:hover {
-  opacity: 1;
   transform: scale(1.1);
 }
 
 #backToTop::after {
   content: '▲';
   color: var(--text);
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 /* Responsive Mobile Adjustments */
@@ -391,17 +388,6 @@ footer {
     padding: 40px 5%;
     font-size: 0.8rem;
   }
-
-  #backToTop {
-    bottom: 16px;
-    right: 16px;
-    width: 20px;
-    height: 20px;
-  }
-
-  #backToTop::after {
-    font-size: 0.6rem;
-  }
 }
 </style>
 </head>
@@ -425,7 +411,7 @@ footer {
 
 <section class="hero">
   <h1>Las Vegas Tech, Gaming & Cyber Law Authority</h1>
-  <p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, and compliance including digital espionage law.</p>
+  <p>Elite legal strategy for cybersecurity, cloud infrastructure, e-commerce, gaming platforms, metagaming, and compliance including digital espionage law, international licensing, and regulatory alignment for technology enterprises.</p>
   <a href="#contact" class="btn">Request Consultation</a>
 </section>
 
@@ -438,17 +424,19 @@ footer {
       <ul>
         <li>ISO/IEC 27001 compliance advisory</li>
         <li>NIST Cybersecurity Framework alignment</li>
-        <li>Incident Response Plan creation</li>
-        <li>Forensic evidence handling standards</li>
+        <li>Incident Response Plan creation and audit</li>
+        <li>Forensic evidence handling standards (admissibility in court)</li>
+        <li>Advanced risk assessment and mitigation strategy</li>
       </ul>
     </div>
     <div class="card">
       <h3>Gaming & Metagaming Law</h3>
       <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance.</p>
       <ul>
-        <li>Esports compliance certifications</li>
+        <li>Esports compliance certifications and regulatory approvals</li>
         <li>Digital asset governance advisory</li>
-        <li>Platform terms-of-service auditing</li>
+        <li>Platform terms-of-service auditing and legal enforcement strategy</li>
+        <li>Anti-money laundering (AML) risk compliance</li>
       </ul>
     </div>
     <div class="card">
@@ -458,6 +446,7 @@ footer {
         <li>PCI DSS standards advisory</li>
         <li>GDPR & CCPA compliance guidance</li>
         <li>Cross-border transaction legal compliance</li>
+        <li>Consumer rights and digital contract enforcement</li>
       </ul>
     </div>
     <div class="card">
@@ -465,8 +454,9 @@ footer {
       <p>Advisory on cross-border data risks, surveillance law, and classified information exposure.</p>
       <ul>
         <li>FISA & Cybersecurity Law guidance</li>
-        <li>Data residency legal strategies</li>
-        <li>Cross-border regulatory compliance</li>
+        <li>Data residency legal strategies and international law alignment</li>
+        <li>Cross-border regulatory compliance and export controls</li>
+        <li>Classified and restricted data risk mitigation</li>
       </ul>
     </div>
   </div>
@@ -478,25 +468,26 @@ footer {
     <div class="card">
       <h3>Cloud Governance</h3>
       <ul>
-        <li>Multi-cloud compliance</li>
-        <li>Data residency & sovereignty</li>
-        <li>Zero-trust frameworks</li>
+        <li>Multi-cloud compliance and SLA enforcement</li>
+        <li>Data residency & sovereignty regulations</li>
+        <li>Zero-trust frameworks advisory</li>
+        <li>Cloud audit readiness and reporting</li>
       </ul>
     </div>
     <div class="card">
       <h3>Infrastructure Law</h3>
       <ul>
-        <li>SaaS/IaaS contracts</li>
-        <li>Vendor risk assessment</li>
-        <li>Service-level disputes</li>
+        <li>SaaS/IaaS vendor contracts review</li>
+        <li>Vendor risk assessment & liability allocation</li>
+        <li>Service-level disputes and litigation support</li>
       </ul>
     </div>
     <div class="card">
       <h3>Security Standards</h3>
       <ul>
-        <li>Encryption mandates</li>
-        <li>Access control liability</li>
-        <li>Cloud breach litigation</li>
+        <li>Encryption and key management legal compliance</li>
+        <li>Access control liability and breach reporting standards</li>
+        <li>Cloud breach litigation and regulatory interface</li>
       </ul>
     </div>
   </div>
@@ -507,15 +498,15 @@ footer {
   <div class="grid">
     <div class="card">
       <h3>Platform Compliance</h3>
-      <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity.</p>
+      <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity, legal enforceability, and player protection.</p>
     </div>
     <div class="card">
       <h3>Virtual Economies</h3>
-      <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance.</p>
+      <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance with taxation and reporting guidance.</p>
     </div>
     <div class="card">
       <h3>Metagaming Oversight</h3>
-      <p>Fair play governance, exploit prevention, and competitive integrity management.</p>
+      <p>Fair play governance, exploit prevention, competitive integrity management, and dispute resolution protocols.</p>
     </div>
   </div>
 </section>
@@ -524,21 +515,21 @@ footer {
   <h2>Insights & Intelligence</h2>
   <article>
     <h3>The Future of Cyber Law in Gaming Ecosystems</h3>
-    <p>Exploring how competitive platforms reshape liability, jurisdiction, and compliance strategy.</p>
+    <p>Exploring how competitive platforms reshape liability, jurisdiction, and compliance strategy, with emphasis on emerging blockchain and NFT-based games.</p>
   </article>
   <article>
     <h3>Cloud Breaches & Legal Exposure</h3>
-    <p>Understanding modern breach responsibility across distributed systems and hybrid clouds.</p>
+    <p>Understanding modern breach responsibility across distributed systems, hybrid clouds, and the intersection of U.S. and international law.</p>
   </article>
   <article>
     <h3>Metagaming vs Compliance</h3>
-    <p>Where player strategy intersects with enforceable digital law and esports regulations.</p>
+    <p>Where player strategy intersects with enforceable digital law, esports regulations, and intellectual property enforcement.</p>
   </article>
 </section>
 
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cloud sectors.</p>
+  <p>Las Vegas HQ — Serving global clients in tech, gaming, and cloud sectors. Offering advisory on cybersecurity, digital asset governance, and regulatory alignment worldwide.</p>
   <form>
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Email Address" required>
@@ -548,7 +539,7 @@ footer {
 </section>
 
 <footer>
-  <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law</p>
+  <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law | ISO 27001 | NIST CSF | PCI DSS Compliance</p>
 </footer>
 
 <!-- Back to Top Button -->
