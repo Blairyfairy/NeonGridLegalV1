@@ -19,7 +19,7 @@
   --glass-bg: rgba(10,14,27,0.55);
   --glass-blur: blur(12px);
   --logo-star: #FFD700; /* yellow star */
-  --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988); /* blue → green gradient */
+  --logo-gradient: linear-gradient(90deg, #00b5d9, #00c988);
 }
 
 /* Reset */
@@ -66,12 +66,10 @@ header {
   gap: 10px;
 }
 
-/* Star color */
 .logo svg {
   fill: var(--logo-star);
 }
 
-/* Gradient logo text */
 .logo span {
   background: var(--logo-gradient);
   -webkit-background-clip: text;
@@ -84,10 +82,9 @@ nav a {
   font-weight: 500;
 }
 
-/* Contact button in nav - half size */
 nav a.contact-btn {
   display: inline-block;
-  padding: 7px 16px; /* reduced to half */
+  padding: 7px 16px;
   border-radius: 40px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--text);
