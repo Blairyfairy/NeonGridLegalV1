@@ -46,7 +46,7 @@ a {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* logo centered */
   align-items: center;
   padding: 20px 6%;
   background: rgba(10,14,27,0.7);
@@ -74,6 +74,10 @@ header {
   background: var(--logo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+nav {
+  margin-left: 20px; 
 }
 
 nav a {
@@ -108,17 +112,18 @@ nav a:hover {
   text-align: center;
   padding: 120px 6% 80px;
   position: relative;
-  background: linear-gradient(rgba(0,20,60,0.6), rgba(0,20,60,0.6)), url('keyboardblue.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,50,0.75), rgba(0,0,50,0.75)), url('keyboardblue.png') center/cover no-repeat;
 }
 
 .hero h1 {
   font-size: 2.8rem;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: #ffffff; /* text white */
 }
 
 .hero p {
-  color: var(--muted);
+  color: #ffffff; /* text white */
   max-width: 720px;
   margin: auto;
   font-size: 1.1rem;
@@ -289,7 +294,7 @@ footer {
 @media(max-width:768px){
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* logo centered for mobile */
     padding: 16px 5%;
   }
 
@@ -302,12 +307,12 @@ footer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* nav links centered */
   }
 
   nav a {
     display: inline-block;
-    margin: 4px 0;
+    margin: 4px 10px;
   }
 
   .hero {
