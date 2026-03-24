@@ -258,6 +258,29 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+#backToTop:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* Responsive Mobile Adjustments */
 @media(max-width:768px){
   header {
@@ -361,6 +384,13 @@ footer {
     padding: 40px 5%;
     font-size: 0.8rem;
   }
+
+  #backToTop {
+    bottom: 16px;
+    right: 16px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
 }
 </style>
 </head>
@@ -391,90 +421,36 @@ footer {
 <section id="services">
   <h2>Core Legal Services</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Cybersecurity Law</h3>
-      <p>Incident response, breach liability, encryption policies, and digital forensics litigation for enterprise clients. Compliance frameworks include <span title="International standard for information security management">ISO 27001</span>, <span title="US National Institute of Standards and Technology Security Guidelines">NIST SP 800-53</span>, <span title="European data protection law">GDPR</span>, and <span title="California consumer privacy act">CCPA</span> standards.</p>
-    </div>
-    <div class="card">
-      <h3>Gaming & Metagaming Law</h3>
-      <p>Regulation across esports, platform governance, in-game economies, and metagaming compliance. Standards referenced: <span title="Esports Integrity Commission">ESIC</span> guidelines, <span title="Random Number Generator verification compliance">RNG compliance</span>, and licensing adherence to Nevada and international gaming commissions.</p>
-    </div>
-    <div class="card">
-      <h3>E-Commerce Compliance</h3>
-      <p>Payment systems, fraud prevention, platform liability, and global trade regulations. Covers <span title="Payment Card Industry Data Security Standard">PCI DSS</span>, <span title="System and Organization Controls">SOC 2 Type II</span> reporting, and anti-money laundering (<span title="Anti Money Laundering">AML</span>) requirements.</p>
-    </div>
-    <div class="card">
-      <h3>Espionage & Data Sovereignty</h3>
-      <p>Advisory on cross-border data risks, surveillance law, and classified information exposure. Includes compliance with <span title="Clarifying Lawful Overseas Use of Data">CLOUD Act</span>, GDPR data transfers, and <span title="International Traffic in Arms Regulations">ITAR</span>-controlled information handling.</p>
-    </div>
+    <div class="card"><h3>Cybersecurity Law</h3></div>
+    <div class="card"><h3>Gaming & Metagaming Law</h3></div>
+    <div class="card"><h3>E-Commerce Compliance</h3></div>
+    <div class="card"><h3>Espionage & Data Sovereignty</h3></div>
   </div>
 </section>
 
 <section id="cloud">
   <h2>Cloud Legal Domains</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Cloud Governance</h3>
-      <ul>
-        <li>Multi-cloud compliance and contracts</li>
-        <li>Data residency & sovereignty advisory</li>
-        <li>Zero-trust frameworks implementation</li>
-        <li>Standards: <span title="Cloud Security ISO standard">ISO 27017</span>, <span title="Cloud Security Alliance Security, Trust & Assurance Registry">CSA STAR</span> Certification, <span title="Federal Risk and Authorization Management Program">FedRAMP</span> Moderate/High</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Infrastructure Law</h3>
-      <ul>
-        <li>SaaS/IaaS/PaaS legal contracts and SLAs</li>
-        <li>Vendor risk assessment including <span title="SOC 1, 2, 3 audits">SOC 1/2/3 audits</span></li>
-        <li>Service-level disputes and remediation enforcement</li>
-        <li>Regulatory compliance for <span title="Health Insurance Portability and Accountability Act">HIPAA</span>, <span title="Payment Card Industry Data Security Standard">PCI DSS</span>, and GDPR in cloud deployments</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Security Standards</h3>
-      <ul>
-        <li>Encryption mandates (<span title="Advanced Encryption Standard">AES-256</span>, <span title="Transport Layer Security">TLS 1.3</span>)</li>
-        <li>Access control liability frameworks</li>
-        <li>Cloud breach litigation and incident documentation</li>
-        <li>Compliance frameworks: <span title="International standard for information security management">ISO 27001</span>, <span title="NIST US security standard">NIST 800-53</span>, <span title="Center for Internet Security benchmarks">CIS Benchmarks</span></li>
-      </ul>
-    </div>
+    <div class="card"><h3>Cloud Governance</h3></div>
+    <div class="card"><h3>Infrastructure Law</h3></div>
+    <div class="card"><h3>Security Standards</h3></div>
   </div>
 </section>
 
 <section id="gaming">
   <h2>Gaming Platform Specialization</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Platform Compliance</h3>
-      <p>Console, PC, and cloud gaming regulatory frameworks ensuring platform integrity. Includes <span title="Entertainment Software Rating Board">ESRB</span>, <span title="Pan-European Game Information">PEGI</span>, and regional age-verification compliance, plus <span title="Random Number Generator audit">RNG audit verification</span>.</p>
-    </div>
-    <div class="card">
-      <h3>Virtual Economies</h3>
-      <p>Tokenized assets, skins, NFT integrations, and marketplace law compliance. Regulatory guidance on <span title="US Securities and Exchange Commission for digital assets">SEC</span> digital asset classification, tax reporting, and <span title="Know Your Customer / Anti Money Laundering">KYC/AML</span> obligations.</p>
-    </div>
-    <div class="card">
-      <h3>Metagaming Oversight</h3>
-      <p>Fair play governance, exploit prevention, and competitive integrity management. Incorporates anti-cheat law enforcement, esports integrity (<span title="Esports Integrity Commission">ESIC</span>) adherence, and dispute arbitration protocols.</p>
-    </div>
+    <div class="card"><h3>Platform Compliance</h3></div>
+    <div class="card"><h3>Virtual Economies</h3></div>
+    <div class="card"><h3>Metagaming Oversight</h3></div>
   </div>
 </section>
 
 <section id="blog" class="blog">
   <h2>Insights & Intelligence</h2>
-  <article>
-    <h3>The Future of Cyber Law in Gaming Ecosystems</h3>
-    <p>Exploring how competitive platforms reshape liability, jurisdiction, and compliance strategy.</p>
-  </article>
-  <article>
-    <h3>Cloud Breaches & Legal Exposure</h3>
-    <p>Understanding modern breach responsibility across distributed systems and hybrid clouds.</p>
-  </article>
-  <article>
-    <h3>Metagaming vs Compliance</h3>
-    <p>Where player strategy intersects with enforceable digital law and esports regulations.</p>
-  </article>
+  <article><h3>The Future of Cyber Law in Gaming Ecosystems</h3></article>
+  <article><h3>Cloud Breaches & Legal Exposure</h3></article>
+  <article><h3>Metagaming vs Compliance</h3></article>
 </section>
 
 <section id="contact" class="contact">
@@ -491,6 +467,26 @@ footer {
 <footer>
   <p>© 2026 Neon Grid Legal — Las Vegas, Nevada | Cyber • Cloud • Gaming Law</p>
 </footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop">↑ Top</button>
+
+<script>
+// Back to top functionality
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
 </body>
 </html>
